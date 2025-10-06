@@ -1,0 +1,7 @@
+{% load static %}
+<li class="nav-item">
+  <a class="nav-link {% if view_name in request.resolver_match.view_name %}active{% endif %}" 
+     href="{% url url_name %}">
+    {{ link_text }}
+  </a> 
+</li>
