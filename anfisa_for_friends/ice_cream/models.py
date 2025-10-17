@@ -1,6 +1,14 @@
 from django.db import models
 
 
+# Категории
+class Category(models.Model):
+    title = models.CharField(max_length=256)
+    slug = models.SlugField(max_length=64, unique=True)
+    output_order = models.PositiveSmallIntegerField(max_length=32767, default=100)
+    is_published = models.BooleanField(default=True)
+
+
 # Топинги
 class Topping(models.Model):
     title = models.CharField(max_length=256)
