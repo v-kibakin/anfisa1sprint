@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Топинги
 class Topping(models.Model):
     title = models.CharField(max_length=256)
@@ -14,7 +15,7 @@ class Wrapper(models.Model):
 
 
 # Сорта мороженого
-class Ice_cream(models.Model):
+class IceCream(models.Model):
     title = models.CharField(max_length=256)
     description = models.TextField()
     is_on_main = models.BooleanField(default=False)
